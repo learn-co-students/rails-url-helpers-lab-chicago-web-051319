@@ -1,0 +1,10 @@
+<h1> Activation </h1>
+<% if @student.active == true %>
+        <% @student.active = false %>
+        <% @student.save %>
+<% else %>
+        <% @student.active = true %>
+        <% @student.save %>
+<% end %>
+
+<% puts "===================================#{@student.active}===========================" %>
